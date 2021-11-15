@@ -1,0 +1,33 @@
+pipeline{
+
+agent any
+
+tools{
+maven 'maven3.8.3'
+}
+stages{
+ 
+stage ('cheakout code'){
+steps{
+git credentialsId: '93c20f14-2217-44d8-9bcc-c6a3327808d5', url: 'https://github.com/raghu5463/maven-web-application.git'
+}
+}
+stage('build'){
+steps{
+sh "mvn clean package"
+}
+}
+/*
+stage ('sonarqube report'){
+steps{
+sh "mvn sonar:sonar"
+}
+}
+stage ('upload artifact into nexus'){
+
+sh "mvn deploy"
+}
+}
+*/
+}
+}
