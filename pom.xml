@@ -94,8 +94,8 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
-	    <repository>
+	    	
+	      <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://3.109.49.252:8081/repository/wallmart-release/</url>
